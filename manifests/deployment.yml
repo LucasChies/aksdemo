@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: python39slim 
+  name: flask-app 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python39slim
+      app: flask-app
   template:
     metadata:
       labels:
-        app: python39slim 
+        app: flask-app 
     spec:
       containers:
-        - name: python39slim 
+        - name: flask-app 
           image: acrclc.azurecr.io/python39slim
           ports:
-          - containerPort: 80
+          - containerPort: 5000

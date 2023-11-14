@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World! This is my Python web app.'
+    return 'Hello, World! This is my Flask app running on Azure Kubernetes Service'

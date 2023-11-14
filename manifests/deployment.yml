@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: python39slim 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python39slim
+  template:
+    metadata:
+      labels:
+        app: python39slim 
+    spec:
+      containers:
+        - name: python39slim 
+          image: acrclc.azurecr.io/python39slim
+          ports:
+          - containerPort: 80
